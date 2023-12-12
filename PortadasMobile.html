@@ -1,0 +1,80 @@
+  
+  <!-- /21854757310/TopHunt/${window.portada}-leaderboard -->
+  <div id='leaderboard1' style=`min-width: 320px; min-height: 50px;`>
+    <script>
+      googletag.cmd.push(function() { googletag.display('leaderboard1'); });
+    </script>
+  </div>
+  [ADINSERTER COUNT]
+  <!-- /21854757310/TopHunt/${window.portada}-rectangle1 -->
+  <div style="display: flex; justify-content: center;">
+  <div id='rectangle1' style=`min-width: 300px; min-height: 250px;`>
+    <script>
+      googletag.cmd.push(function() { googletag.display('rectangle1'); });
+
+    </script>
+  </div>
+  </div>
+  [ADINSERTER COUNT]
+  <script>
+    window.googletag = window.googletag || {cmd: []};
+    googletag.cmd.push(function() {
+      
+      googletag.enableServices();
+    });
+  </script>
+  <!-- /21854757310/TopHunt/${window.portada}-leaderboard -->
+  <div id='leaderboard2' style=`min-width: 320px; min-height: 50px;`>
+    <script>
+      googletag.cmd.push(function() { googletag.display('leaderboard2'); });
+    </script>
+  </div>
+  [ADINSERTER COUNT]
+
+
+  <script>
+          window.googletag = window.googletag || {cmd: []};
+      googletag.pubads().enableLazyLoad({
+            // Fetch slots within 5 viewports.
+            fetchMarginPercent: 300,
+            // Render slots within 2 viewports.
+            renderMarginPercent: 100,
+            // Double the above values on mobile, where viewports are smaller
+            // and users tend to scroll faster.
+            mobileScaling: 2.0
+          });
+      let urlDict = {
+      "https://tophunt.in/category/wordle/": "Wordle",
+      "https://tophunt.in/category/apps-and-games/": "Games",
+      "https://tophunt.in/category/general-knowledge/": "GKA",
+      "https://tophunt.in/category/amazon-quiz/": "AQA",
+    }
+      window.portada = urlDict[window.location.href]
+      
+    </script>
+    <script>
+      window.googletag = window.googletag || {cmd: []};
+      googletag.cmd.push(function() {
+        console.log(window.portada)
+        googletag.defineSlot(`/21854757310/TopHunt/${window.portada}-top`, [[728, 90], [320, 50]], `top`).addService(googletag.pubads());
+        googletag.defineSlot(`/21854757310/TopHunt/${window.portada}-leaderboard1`, [[320, 50], [728, 250], [728, 90]], `leaderboard1`).addService(googletag.pubads());
+        googletag.defineSlot(`/21854757310/TopHunt/${window.portada}-rectangle1`, [300, 250], `rectangle1`).addService(googletag.pubads());
+        googletag.defineSlot(`/21854757310/TopHunt/${window.portada}-leaderboard2`, [[320, 50], [728, 250], [728, 90]], `leaderboard2`).addService(googletag.pubads());
+        googletag.defineSlot(`/21854757310/TopHunt/${window.portada}-rectangle2`, [300, 250], `rectangle2`).addService(googletag.pubads());
+
+        googletag.enableServices();
+      });
+    </script>
+    
+    
+  <!-- /21854757310/TopHunt/${window.portada}-rectangle1 -->
+  <div style="display: flex; justify-content: center;">
+    <div id='rectangle2' style=`min-width: 300px; min-height: 250px;`>
+        <script>
+            googletag.cmd.push(function() { googletag.display('rectangle2'); });
+            googletag.cmd.push(function() { googletag.display('top'); });
+            </script>
+  </div>
+
+</div>
+  
