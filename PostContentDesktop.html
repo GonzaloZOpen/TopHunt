@@ -1,4 +1,5 @@
 <script>
+  addObserver()
     window.googletag = window.googletag || {cmd: []};
     googletag.cmd.push(function() {
       googletag.defineSlot('/21854757310/TopHunt/internas-leaderboard1', [[320, 50], [728, 250], [728, 90]], 'internas-leaderboard1').addService(googletag.pubads());
@@ -7,9 +8,9 @@
   </script>
   <!-- /21854757310/TopHunt/internas-leaderboard -->
   <div style="display: flex; justify-content: center;">
-    <div id='internas-leaderboard1' style='min-width: 320px; min-height: 50px;'>
+    <div id='internas-leaderboard1' class="ads" style='min-width: 320px; min-height: 50px;'>
         <script>
-            googletag.cmd.push(function() { googletag.display('internas-leaderboard1'); });
+            googletag.cmd.push(function() { tryDisplay('internas-leaderboard1'); });
             </script>
   </div>
 </div>
@@ -29,12 +30,12 @@
   </script>
   <!-- /21854757310/TopHunt/internas-rectangle1 -->
   <div style="display: flex; justify-content: center;">
-    <div id='rectangle5' style='min-width: 300px; min-height: 250px;'>
+    <div id='rectangle5' class="ads" style='min-width: 300px; min-height: 250px;'>
     </div>
-    <div id='rectangle6' style='min-width: 300px; min-height: 250px;'>
+    <div id='rectangle6' class="ads" style='min-width: 300px; min-height: 250px;'>
         <script>
-            googletag.cmd.push(function() { googletag.display('rectangle5'); });
-            googletag.cmd.push(function() { googletag.display('rectangle6'); });
+            googletag.cmd.push(function() { tryDisplay('rectangle5' , 'internas-rectangle5'); });
+            googletag.cmd.push(function() { tryDisplay('rectangle6', 'internas-rectangle6'); });
             </script>
   </div>
 </div>
@@ -48,9 +49,9 @@
   </script>
   <!-- /21854757310/TopHunt/internas-leaderboard -->
   <div style="display: flex; justify-content: center;">
-    <div id='internas-leaderboard2' style='min-width: 320px; min-height: 50px;'>
+    <div id='internas-leaderboard2' class="ads" style='min-width: 320px; min-height: 50px;'>
         <script>
-            googletag.cmd.push(function() { googletag.display('internas-leaderboard2'); });
+            googletag.cmd.push(function() { tryDisplay('internas-leaderboard2'); });
             </script>
   </div>
 </div>
@@ -70,14 +71,14 @@
   </script>
   <!-- /21854757310/TopHunt/internas-rectangle1 -->
   <div style="display: flex; justify-content: center;">
-    <div id='rectangle7' style='min-width: 300px; min-height: 250px;'>
+    <div id='rectangle7' class="ads" style='min-width: 300px; min-height: 250px;'>
         <script>
-            googletag.cmd.push(function() { googletag.display('rectangle7'); });
+            googletag.cmd.push(function() { tryDisplay('rectangle7', 'internas-rectangle7'); });
             </script>
   </div>
-  <div id='rectangle8' style='min-width: 300px; min-height: 250px;'>
+  <div id='rectangle8' class="ads" style='min-width: 300px; min-height: 250px;'>
     <script>
-        googletag.cmd.push(function() { googletag.display('rectangle8'); });
+        googletag.cmd.push(function() { tryDisplay('rectangle8', 'internas-rectangle8'); });
         </script>
   </div>
 </div>
@@ -92,9 +93,9 @@
   </script>
   <!-- /21854757310/TopHunt/internas-leaderboard -->
   <div style="display: flex; justify-content: center;">
-    <div id='internas-leaderboard3' style='min-width: 320px; min-height: 50px;'>
+    <div id='internas-leaderboard3' class="ads" style='min-width: 320px; min-height: 50px;'>
         <script>
-            googletag.cmd.push(function() { googletag.display('internas-leaderboard3'); });
+            googletag.cmd.push(function() { tryDisplay('internas-leaderboard3'); });
             </script>
   </div>
 </div>
@@ -114,14 +115,14 @@
   </script>
   <!-- /21854757310/TopHunt/internas-rectangle1 -->
   <div style="display: flex; justify-content: center;">
-    <div id='rectangle9' style='min-width: 300px; min-height: 250px;'>
+    <div id='rectangle9' class="ads" style='min-width: 300px; min-height: 250px;'>
         <script>
-            googletag.cmd.push(function() { googletag.display('rectangle9'); });
+            googletag.cmd.push(function() { tryDisplay('rectangle9', 'internas-rectangle9'); });
             </script>
   </div>
-  <div id='rectangle10' style='min-width: 300px; min-height: 250px;'>
+  <div id='rectangle10' class="ads" style='min-width: 300px; min-height: 250px;'>
     <script>
-        googletag.cmd.push(function() { googletag.display('rectangle10'); });
+        googletag.cmd.push(function() { tryDisplay('rectangle10', 'internas-rectangle10'); });
         </script>
   </div>
 </div>
@@ -136,9 +137,9 @@
   </script>
   <!-- /21854757310/TopHunt/internas-leaderboard -->
   <div style="display: flex; justify-content: center;">
-    <div id='internas-leaderboard4' style='min-width: 320px; min-height: 50px;'>
+    <div id='internas-leaderboard4' class="ads" style='min-width: 320px; min-height: 50px;'>
         <script>
-            googletag.cmd.push(function() { googletag.display('internas-leaderboard4'); });
+            googletag.cmd.push(function() { tryDisplay('internas-leaderboard4'); });
             </script>
   </div>
 </div>
@@ -158,14 +159,14 @@
   </script>
   <!-- /21854757310/TopHunt/internas-rectangle1 -->
   <div style="display: flex; justify-content: center;">
-    <div id='rectangle11' style='min-width: 300px; min-height: 250px;'>
+    <div id='rectangle11' class="ads" style='min-width: 300px; min-height: 250px;'>
         <script>
-            googletag.cmd.push(function() { googletag.display('rectangle11'); });
+            googletag.cmd.push(function() { tryDisplay('rectangle11', 'internas-rectangle11'); });
             </script>
   </div>
-  <div id='rectangle12' style='min-width: 300px; min-height: 250px;'>
+  <div id='rectangle12' class="ads" style='min-width: 300px; min-height: 250px;'>
     <script>
-        googletag.cmd.push(function() { googletag.display('rectangle12'); });
+        googletag.cmd.push(function() { tryDisplay('rectangle12', 'internas-rectangle12'); });
         </script>
   </div>
 </div>

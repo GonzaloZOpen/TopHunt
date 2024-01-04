@@ -1,19 +1,20 @@
   
   <!-- /21854757310/TopHunt/${window.portada}-leaderboard -->
-  <div id='leaderboard1' style=`min-width: 320px; min-height: 50px;`>
+  <div id='leaderboard1' class="ads" style=`min-width: 320px; min-height: 50px;`>
     <script>
-      googletag.cmd.push(function() { googletag.display('leaderboard1'); });
+      addObserver()
+      googletag.cmd.push(function() { tryDisplay('leaderboard1', `${window.portada}-leaderboard1`); });
     </script>
   </div>
   [ADINSERTER COUNT]
   <!-- /21854757310/TopHunt/${window.portada}-rectangle1 -->
   <div style="display: flex; justify-content: center;">
-  <div id='rectangle5' style=`min-width: 300px; min-height: 250px;`>
+  <div id='rectangle5' class="ads" style=`min-width: 300px; min-height: 250px;`>
   </div>
-  <div id='rectangle6' style=`min-width: 300px; min-height: 250px;`>
+  <div id='rectangle6' class="ads" style=`min-width: 300px; min-height: 250px;`>
     <script>
-      googletag.cmd.push(function() { googletag.display('rectangle5'); });
-      googletag.cmd.push(function() { googletag.display('rectangle6'); });
+      googletag.cmd.push(function() { tryDisplay('rectangle5', `${window.portada}-rectangle5`); });
+      googletag.cmd.push(function() { tryDisplay('rectangle6' ,`${window.portada}-rectangle6`); });
     </script>
   </div>
   </div>
@@ -26,15 +27,16 @@
     });
   </script>
   <!-- /21854757310/TopHunt/${window.portada}-leaderboard -->
-  <div id='leaderboard2' style=`min-width: 320px; min-height: 50px;`>
+  <div id='leaderboard2' class="ads" style=`min-width: 320px; min-height: 50px;`>
     <script>
-      googletag.cmd.push(function() { googletag.display('leaderboard2'); });
+      googletag.cmd.push(function() { tryDisplay('leaderboard2', `${window.portada}-leaderboard2`); });
     </script>
   </div>
   [ADINSERTER COUNT]
 
 
   <script>
+    
           window.googletag = window.googletag || {cmd: []};
       googletag.pubads().enableLazyLoad({
             // Fetch slots within 5 viewports.
@@ -45,13 +47,6 @@
             // and users tend to scroll faster.
             mobileScaling: 2.0
           });
-      let urlDict = {
-      "https://tophunt.in/category/wordle/": "Wordle",
-      "https://tophunt.in/category/apps-and-games/": "Games",
-      "https://tophunt.in/category/general-knowledge/": "GKA",
-      "https://tophunt.in/category/amazon-quiz/": "AQA",
-    }
-      window.portada = urlDict[window.location.href]
       
     </script>
     <script>
@@ -72,15 +67,15 @@
     
   <!-- /21854757310/TopHunt/${window.portada}-rectangle1 -->
   <div style="display: flex; justify-content: center;">
-    <div id='rectangle7' style=`min-width: 300px; min-height: 250px;`>
+    <div id='rectangle7' class="ads" style=`min-width: 300px; min-height: 250px;`>
         <script>
-            googletag.cmd.push(function() { googletag.display('rectangle7'); });
+            googletag.cmd.push(function() { tryDisplay('rectangle7', `${window.portada}-rectangle7`); });
             </script>
   </div>
-  <div id='rectangle8' style=`min-width: 300px; min-height: 250px;`>
+  <div id='rectangle8' class="ads" style=`min-width: 300px; min-height: 250px;`>
     <script>
-        googletag.cmd.push(function() { googletag.display('rectangle8'); });
-        googletag.cmd.push(function() { googletag.display('top'); });
+        googletag.cmd.push(function() { tryDisplay('rectangle8', `${window.portada}-rectangle8`); });
+        googletag.cmd.push(function() { tryDisplay('top', `${window.portada}-top`); });
         </script>
   </div>
 </div>
