@@ -1,0 +1,186 @@
+<style>
+  .ai-viewport-1, .ai-viewport-2, .ai-viewport-3 {
+     width: 100%;
+  }
+  </style>
+  <script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
+  <script>
+  //   let eventos = {
+  //     "slotRequested": [],
+  //     "slotResponseReceived": [],
+  //     "slotOnload": [],
+  //     "slotRenderEnded": [],
+  //     "impressionViewable": [],
+  //     "slotVisibilityChanged": [],
+  //   }
+  //   let counter = 0;
+  var data = {
+    requests: 0,
+    responses: 0,
+    renders: 0,
+    onLoads: 0,
+    visChanges: 0,
+    viewables: 0,
+    requestsA: 0,
+    requestsFallidas: 0
+  }
+    let urlDict = {
+        "https://tophunt.in/category/wordle/": "Wordle",
+        "https://tophunt.in/category/apps-and-games/": "Games",
+        "https://tophunt.in/category/general-knowledge/": "GKA",
+        "https://tophunt.in/category/amazon-quiz/": "AQA",
+        "https://tophunt.in/": "home"
+      }
+        window.portada = urlDict[window.location.href]
+       window.dataLayer = window.dataLayer || [];
+    window.googletag = window.googletag || {cmd: []};
+      window.googletag = window.googletag || {cmd: []};
+      googletag.cmd.push(function() { 
+        googletag.pubads().collapseEmptyDivs(true);
+        googletag.pubads().addEventListener("slotRequested", function(e) {
+          data.requests++ 
+          window.dataLayer.push({event: "slotRequested", adUnit: e.slot.getAdUnitPath().split("/").slice(-1)[0]});
+          // eventos.slotRequested.push(e, counter)
+          // counter++  
+    })
+    //     googletag.pubads().addEventListener("slotResponseReceived", function(e) { 
+    //       window.dataLayer.push({event: "slotResponseReceived", adUnit: e.slot.getAdUnitPath().split("/").slice(-1)[0]});
+    //       // eventos.slotResponseReceived.push(e, counter)
+    //       // counter++  
+    // })
+        googletag.pubads().addEventListener("slotOnload", function(e) { 
+          data.onLoads++
+          // window.dataLayer.push({event: "slotOnload", adUnit: e.slot.getAdUnitPath().split("/").slice(-1)[0]});  
+          // eventos.slotOnload.push(e, counter)
+          // counter++  
+    })
+    //     googletag.pubads().addEventListener("slotRenderEnded", function(e) { 
+    //       window.dataLayer.push({event: "slotRenderEnded", adUnit: e.slot.getAdUnitPath().split("/").slice(-1)[0], isEmpty: e.isEmpty});  
+    //       // eventos.slotRenderEnded.push(e, counter)
+    //       // counter++  
+    // })
+        googletag.pubads().addEventListener("impressionViewable", function(e) {
+          data.viewables++ 
+          window.dataLayer.push({event: "impressionViewable", adUnit: e.slot.getAdUnitPath().split("/").slice(-1)[0]});
+          // eventos.impressionViewable.push(e, counter)
+          // counter++    
+    })
+    //     googletag.pubads().addEventListener("slotVisibilityChanged", function(e) { 
+    //       window.dataLayer.push({event: "slotVisibilityChanged", adUnit: e.slot.getAdUnitPath().split("/").slice(-1)[0]});  
+    //       // eventos.slotVisibilityChanged.push(e, counter)
+    //       // counter++  
+    // })
+  
+  });
+  </script>
+  <script>
+  var slotCounter = 0
+  var displayed = []
+    function tryDisplay (id, adUnit) {
+      try {
+      slotCounter++
+        //display()
+      
+        window.dataLayer.push({event: "slotRequestedA", adUnit: adUnit});
+        googletag.display(id)
+        data.requestsA++
+
+    } catch (e) {
+      data.requestsFallidas++
+    console.log(e.message)
+    }
+    
+    }
+
+
+  </script>
+  <script>
+  function addObserver () {
+  return
+  }
+//   var observer
+   var count = 0
+//   var mutations = []
+//   var render = []
+//   var impressions = []
+//     function addObserver () {
+//     try {
+//     observer.disconnect();
+//     } catch {}
+//   let targets = document.getElementsByClassName("ads");
+
+// // Options for the observer (which mutations to observe)
+// let config = { attributes: true, childList: true, subtree: true };
+
+// // Callback function to execute when mutations are observed
+// let callback = (mutationList, observer) => {
+// for (const mutation of mutationList) {
+// mutations.push(mutation)
+// if (mutation.type == "attributes") {
+//   if (!mutation.target.classList.contains("ads")) {
+//     if (impressions.indexOf(mutation.target.id.split("/")[3].split("_")[0]) == -1) {
+//     impressions.push(mutation.target.id.split("/")[3].split("_")[0])
+//     }
+//   } else return
+  
+// }
+//   if (mutation.target.classList.contains("ads")) {
+//   count++
+//     render.push(mutation.addedNodes[0].id.split("/")[3].split("_")[0])
+//   }
+// }
+// //console.log(slotCounter, render.length)
+// if (render.length == slotCounter) {
+// for (let slot of render) {
+//     window.dataLayer.push({event: "slotRenderEndedA", adUnit: slot, isEmpty: impressions.includes(slot) ? false : true})
+//   }
+//   for (let slot of impressions) {
+//     window.dataLayer.push({event: "slotOnLoadA", adUnit: slot})
+//   }
+// }
+// };
+
+
+
+// observer = new MutationObserver(callback);
+
+
+// for (let targetNode of targets) {
+//   observer.observe(targetNode, config);
+// }
+// return
+// }
+
+window.addEventListener("beforeunload", e => {
+  time = new Date();
+  currentTime =  `${time.getDate()}/${time.getMonth() + 1}/${time.getFullYear()} ${time.getHours()}:${time.getMinutes()}:${time.getSeconds()}`
+
+  fetch("https://rl5af81bp6.execute-api.us-west-2.amazonaws.com/Beta/DynamoDBManager", {
+  method: "POST",
+  body: JSON.stringify({"operation": "create",
+        "payload": {
+            "Item": {
+        "requests": data.requests,
+        "impressions": data.onLoads,
+        "views": data.viewables,
+        "created_at": currentTime,
+        "updated_at": currentTime,
+        "requestsA": data.requestsA,
+        "requestsFallidas": data.requestsFallidas
+            }
+        }})
+  })
+})
+
+
+    
+
+  
+  </script>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-KT9DSJ36');</script>
+  <!-- End Google Tag Manager -->
