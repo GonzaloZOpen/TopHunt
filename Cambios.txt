@@ -1,0 +1,33 @@
+Changelog TopHunt/Analytics/GAM/Server
+04/01
+TopHunt:
+    Cambios a settings/inserter:
+        -DesktopHome: Borrado
+        -MobileHome: Borrado
+        -PortadasDesktop: Borrado
+        -PortadasMobile: Borrado
+        -PostContentDesktop: Borrado
+        -PostContentMobile: Borrado
+        -SidebarPortadas: Borrado
+        -SidebarPost: Borrado
+        -Header: Se quitaron las escucha de evento excepto la de Request. Disparando solamente a GA2
+
+    Cambios a elemento header:
+        -Se dejaron 2 slots (Top1/Top2) (Unicos slots activos del sitio actualmente)
+
+Analytics:
+    Eventos:
+        -Queda activo solamente el evento de Request
+GAM:
+    -Se crearon 2 ordenes (Prioridad 4 y Prioridad 2) para testear hipotesis de Unfilled vs Fill
+
+08/01
+TopHunt:
+    Cambios a settings/inserter:
+        -Se agrego la escucha de evento a OnLoad disparando a GA2
+Analytics:
+    Eventos:
+        -Se activo el evento de OnLoad
+Server:
+    -Se comenzo el desarrollo del server usando Nodejs/Express/Sequelize/PostgreSQL en Docker
+    
